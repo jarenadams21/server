@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Message Board</title>
+</head>
+<body>
+    <script>
+        const data = {
+            folk: 4,
+            knife: 3
+        }
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+        async function fetchData() {
+        const response = await fetch('/api', options);
+        const json = await response.json();
+        console.log(json);
+        }
+        fetchData();
+        </script>
+    <h1> Community Message Board</h1>
+    <p> Hello.</p>
+    <button onclick = "fetchData()" > Click Me </button>
+</body>
+</html>
