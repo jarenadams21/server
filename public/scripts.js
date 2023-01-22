@@ -1,20 +1,8 @@
-const data = {
-    folk: 4,
-    knife: 3
-}
+var postButton = document.getElementById('send');
 
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-}
-async function fetchData() {
-const response = await fetch('/api', options);
-const json = await response.json();
-console.log(json);
-}
+
+
+postButton.addEventListener("click", postData());
 
 async function getData() {
     const response = await fetch('/api');
@@ -32,3 +20,20 @@ async function getData() {
 
     console.log(data);
     }
+
+async function postData() {
+     const data = {
+        text: document.getElementById('inputfield').value,
+    }
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }
+        const response = await fetch('/api', options);
+        const json = await response.json();
+        console.log(json);
+        }

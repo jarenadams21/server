@@ -32,6 +32,7 @@ app.get('/api', (request, response) => {
             response.end();
             return;
         }
+        console.log('i was called');
         response.json(data); 
     })
      
@@ -39,8 +40,10 @@ app.get('/api', (request, response) => {
 
 // API post request is made to the server
 app.post('/api', (request, response) => {
+
     console.log('I got a request!');
     const data = request.body;
+    console.log(data);
     const timestamp = Date.now();
     data.timestamp = timestamp;
     database.insert(data);
