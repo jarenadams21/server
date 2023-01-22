@@ -10,12 +10,13 @@ const app = express();
 // Database initalization
 const db = require('nedb');
 
+
 // Server is listening at localhost:3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening at ${port}`));
 
 // Statically provide everything in the public folder
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Incoming data is parsed as a JSON
 app.use(express.json({limit: '1mb'}));
