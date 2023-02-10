@@ -1,39 +1,4 @@
-`C4C Community Message Board Application`
-
-
-
-# High Level Overview
-
-## Here is text
-
-&emsp;
-
-
-&emsp;
-
-# Components & Their Interactions
-
-## Here is text
-
-&emsp;
-
-
-&emsp;
-
-# Why I Fulfill The Requirements
-
-## Here is text
-
-&emsp;
-
-
-&emsp;
-
-# How To Start The Application
-
-## Here is text
-
-&emsp;
+Was intended for a community message board project, but is now just a standalone server skeleton that connects the front and back ends with a local database.
 
 
 # Getting Started with Create React App
